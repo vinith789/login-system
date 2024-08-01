@@ -1,0 +1,65 @@
+<?php
+@include '../../config.php';
+
+?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+   <header class="header">
+      <div class="flex">
+         <a href="#" class="logo">Shop</a>
+         <nav class="navbar">
+            <a href="./admin.html">add products</a>
+            <a href="./products.html">view products</a>
+            <a href="./list.html">view your products</a>
+            <a href="./cart.html">Confirm Request</a>
+         </nav>
+   </header>
+
+<section class="display-product-table">
+
+   <table>
+
+      <thead>
+         <th>product image</th>
+         <th>product name</th>
+         <th>product price</th>
+         <th>action</th>
+      </thead>
+
+      <tbody>
+
+         <tr>
+            <td><img src="../uploaded_img/laddy fingers.jpg" height="100" alt=""></td>
+            <td>laddy finger</td>
+            <td>250/-</td>
+            <td>
+               <a href="list.php?delete=<?php echo $row['id']; ?>" class="delete-btn" onclick="return confirm('are your sure you want to delete this?');"> <i class="fas fa-trash"></i> delete </a>
+               <a href="list.php?edit=<?php echo $row['id']; ?>" class="option-btn"> <i class="fas fa-edit"></i> update </a>
+            </td>
+         </tr>
+         <tr>
+            <td><img src="../uploaded_img/tomato.jpg" height="100" alt=""></td>
+            <td>Tomato</td>
+            <td>250/-</td>
+            <td>
+               <a href="list.php?delete=<?php echo $row['id']; ?>" class="delete-btn" onclick="return confirm('are your sure you want to delete this?');"> <i class="fas fa-trash"></i> delete </a>
+               <a href="list.php?edit=<?php echo $row['id']; ?>" class="option-btn"> <i class="fas fa-edit"></i> update </a>
+            </td>
+         </tr>
+
+      </tbody>
+   </table>
+
+</section>
+
+
+</body>
+</html>

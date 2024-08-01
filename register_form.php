@@ -48,10 +48,6 @@ if(isset($_POST['submit'])){
 </head>
 <body>
 
-<div class="form-container">
-
-   <form action="" method="post">
-      <h3>register now</h3>
       <?php
       if(isset($error)){
          foreach($error as $error){
@@ -59,19 +55,6 @@ if(isset($_POST['submit'])){
          };
       };
       ?>
-      <input type="text" name="name" required placeholder="enter your name">
-      <input type="email" name="email" required placeholder="enter your email">
-      <input type="password" name="password" required placeholder="enter your password">
-      <input type="password" name="cpassword" required placeholder="confirm your password">
-      <select name="user_type">
-         <option value="user">user</option>
-         <option value="admin">admin</option>
-      </select>
-      <input type="submit" name="submit" value="register now" class="form-btn">
-      <p>already have an account? <a href="index.html">login now</a></p>
-   </form>
-
-</div>
 
 </body>
 </html>
